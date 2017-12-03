@@ -1,48 +1,41 @@
 package AirCompany;
 
+
+
+
 public class PlaneObject {
 
-    private  int weight;
-    private  int lenght;
+
+    private  String model;
+    private  String type;
     private  int capacity;
     private  int distanse;
+    private  int id;
 
-    public PlaneObject() {
-        this.weight = weight;
-        this.lenght = lenght;
+    public PlaneObject(String model, String type, int capacity, int distanse, int id) {
+        this.model = model;
+        this.type = type;
         this.capacity = capacity;
         this.distanse = distanse;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getLenght() {
-        return lenght;
-    }
-
-    public void setLenght(int lenght) {
-        this.lenght = lenght;
+        this.id = id;
     }
 
     public int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
     public int getDistanse() {
         return distanse;
     }
 
-    public void setDistanse(int distanse) {
-        this.distanse = distanse;
+    @Override
+    public String toString() {
+        return
+                " Модель = " + model +
+                ", тип = " + type +
+                ", вместимость = " + capacity +
+                ", дальность полета = " + distanse +
+                ", id = " + id +
+                '}' + "\n";
     }
 }

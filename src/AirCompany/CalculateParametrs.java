@@ -2,9 +2,10 @@ package AirCompany;
 
 public interface CalculateParametrs {
 
-     void  tonnage ();
-     void capacity();
-     void distance ();
+     void  calculateTonnage ();
+     void calculateCapacity();
+     void calculateDistance ();
+
 
 
 
