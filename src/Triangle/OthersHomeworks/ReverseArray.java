@@ -1,5 +1,6 @@
 package Triangle.OthersHomeworks;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ReverseArray {
@@ -24,15 +25,22 @@ public class ReverseArray {
         array[9] = r.nextInt(10);
 
 
-        printArray (array);
+
+
+
+
+        printArray(array);
         System.out.println("----------------------");
-        revArray(array);
+
+
+ //           revArray(array);
+        System.out.println(Arrays.toString(revArray(array)));
 
 
 
     }
 
-        public static void   printArray (int[] array) {
+    public static void printArray(int[] array) {
 
         for (int i = 0; i < array.length; i++) {
 
@@ -40,20 +48,17 @@ public class ReverseArray {
         }
     }
 
+    public static int[] revArray(int[] array) {
+        int [] arrayReverse = new int [array.length];
 
-        public  static  void  revArray (int[] array){
+        for(int i = 0, r = arrayReverse.length -1; i<array.length; i++, r-- ) {
 
-        for(int r =array.length-1;r>=0; r--){
-            System.out.println(array[r]+ " reverse array");
-
-
-        }
+            arrayReverse[r]= array[i];
         }
 
+        return  arrayReverse;
+
+    }
 
 
-
-
-         }
-
-
+}
