@@ -18,29 +18,40 @@ public class GarageAirCompany implements CalculateParametrs {
      listOfPlanes.add(new PlaneObject("Konkord","Plane",6000,12000,5));
      listOfPlanes.add(new PlaneObject("Konkord","Plane",6000,12000,6));
 
-
+     calculateCapacity( listOfPlanes );
 
     }
 
 
 
-    @Override
+
+    @Override // общая грузоподъемность рассчитывается анналогично общей вместимости
     public void calculateTonnage() {
 
+
     }
 
+
+
     @Override
-    public void calculateCapacity() {
+    public void calculateCapacity (ArrayList <PlaneObject> listOfPlanes) {
 
+       int allCapacity = 0;
 
+        for (PlaneObject planeObjects :listOfPlanes){
 
+            allCapacity += planeObjects.getCapacity();
 
+        }
+
+        System.out.println("Вместимость всех самолетов компании : " + allCapacity + "\n");
 
 
     }
 
     @Override
     public void calculateDistance() {
+
 
     }
 
