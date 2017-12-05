@@ -9,14 +9,14 @@ public class PlaneObject {
     private  String model;
     private  String type;
     private  int capacity;
-    private  int distanse;
+    private  int distance;
     private  int id;
 
-    public PlaneObject(String model, String type, int capacity, int distanse, int id) {
+    public PlaneObject(String model, String type, int capacity, int distance, int id) {
         this.model = model;
         this.type = type;
         this.capacity = capacity;
-        this.distanse = distanse;
+        this.distance = distance;
         this.id = id;
     }
 
@@ -25,7 +25,7 @@ public class PlaneObject {
     }
 
     public int getDistanse() {
-        return distanse;
+        return distance;
     }
 
     @Override
@@ -34,8 +34,7 @@ public class PlaneObject {
                 " Модель = " + model +
                 ", тип = " + type +
                 ", вместимость = " + capacity +
-                ", дальность полета = " + distanse +
-                ", id = " + id +
-                '}' + "\n";
+                ", дальность полета = " + distance +
+                ", id = " + id;
     }
 }
