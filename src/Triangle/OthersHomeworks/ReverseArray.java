@@ -25,17 +25,12 @@ public class ReverseArray {
         array[9] = r.nextInt(10);
 
 
-
-
-
-
         printArray(array);
         System.out.println("----------------------");
 
 
- //           revArray(array);
+        //           revArray(array);
         System.out.println(Arrays.toString(revArray(array)));
-
 
 
     }
@@ -49,14 +44,14 @@ public class ReverseArray {
     }
 
     public static int[] revArray(int[] array) {
-        int [] arrayReverse = new int [array.length];
+        int[] arrayReverse = new int[array.length];
 
-        for(int i = 0, r = arrayReverse.length -1; i<array.length; i++, r-- ) {
+        for (int i = 0, r = arrayReverse.length - 1; i < array.length; i++, r--) {
 
-            arrayReverse[r]= array[i];
+            arrayReverse[r] = array[i];
         }
 
-        return  arrayReverse;
+        return arrayReverse;
 
     }
 

@@ -8,7 +8,7 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 
-        int [] array;
+        int[] array;
 
         array = new int[10];
 
@@ -26,18 +26,17 @@ public class BinarySearch {
         array[9] = r.nextInt(50);
 
         Arrays.sort(array);
-        printArray (array);
+        printArray(array);
         System.out.println("----------------------");
         int first = 0;
         int last = array.length;
 
-        binarySearch(array,first,last,8);
-
+        binarySearch(array, first, last, 8);
 
 
     }
 
-    public static void   printArray (int[] array) {
+    public static void printArray(int[] array) {
 
         for (int i = 0; i < array.length; i++) {
 
@@ -45,25 +44,24 @@ public class BinarySearch {
         }
     }
 
-    public static  void binarySearch (int[] array, int first, int last, int searchedElement){
+    public static void binarySearch(int[] array, int first, int last, int searchedElement) {
 
         int position;
 
-        position = (first + last)/2;
+        position = (first + last) / 2;
 
-        while ((array[position] != searchedElement)&& ( first<=last)){
+        while ((array[position] != searchedElement) && (first <= last)) {
 
-            if (array[position]> searchedElement){
+            if (array[position] > searchedElement) {
 
                 last -= position;
 
-            }
-            else {
+            } else {
 
                 first += position;
             }
 
-            position = (first + last)/2;
+            position = (first + last) / 2;
 
         }
 
