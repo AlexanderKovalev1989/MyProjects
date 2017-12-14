@@ -1,5 +1,3 @@
-package AirCompany;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,9 +34,9 @@ public class Application {
 
             } else {
 
- //               System.out.println("таких самолетов нет нет");
+                //               System.out.println("таких самолетов нет нет");
 
-             // единственны вопрос, как вывести информацию только с этого блока? тк он выведет ее столько раз
+                // единственны вопрос, как вывести информацию только с этого блока? тк он выведет ее столько раз
                 // сколько элементво в ArrayList, если ставить break будет работать когда необходимых
                 //элементов нет, или он один. а у меня несколько одиннаковых самолетов
             }
@@ -60,7 +58,7 @@ public class Application {
             for (PlaneObject planeObjects : garage.listOfPlanes) {
 
 
-                 System.out.println(planeObjects);
+                System.out.println(planeObjects);
 
                 writer.write(String.valueOf(planeObjects));
                 // запись по символам

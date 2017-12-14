@@ -1,23 +1,18 @@
-package AirCompany;
+public class PlaneObject extends WorkObject {
 
 
-public class PlaneObject {
-
-
-    private String model;
     private String type;
     private int capacity;
     private int distance;
-    private int id;
 
-    public PlaneObject(String model, String type, int capacity, int distance, int id) {
-        this.model = model;
+
+    public PlaneObject(String model, int id, String type, int capacity, int distance) {
+        super(model, id);
         this.type = type;
         this.capacity = capacity;
         this.distance = distance;
-        this.id = id;
-    }
 
+    }
 
     public int getCapacity() {
         return capacity;
@@ -31,11 +26,11 @@ public class PlaneObject {
     @Override
     public String toString() {
         return
-                " Модель = " + model +
+                " Модель = " + super.getModel() +
                         ", тип = " + type +
                         ", вместимость = " + capacity +
                         ", дальность полета = " + distance +
-                        ", id = " + id;
+                        ", id = " + super.getId();
     }
 
 

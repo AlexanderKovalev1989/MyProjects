@@ -1,5 +1,3 @@
-package AirCompany;
-
 import java.util.List;
 
 public interface CalculateParametrs {

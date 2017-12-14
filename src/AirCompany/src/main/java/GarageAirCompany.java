@@ -1,5 +1,3 @@
-package AirCompany;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -11,18 +9,17 @@ public class GarageAirCompany implements CalculateParametrs {
 
     {
 
-        listOfPlanes.add(new PlaneObject("Boing - 747", "Plane", 5000, 10000, 1));
-        listOfPlanes.add(new PlaneObject("Boing - 747", "Plane", 5000, 10000, 2));
-        listOfPlanes.add(new PlaneObject("Mi - 78", "Helicopter", 700, 900, 3));
-        listOfPlanes.add(new PlaneObject("Mi - 78", "Helicopter", 700, 900, 4));
-        listOfPlanes.add(new PlaneObject("Konkord", "Plane", 6000, 12000, 5));
-        listOfPlanes.add(new PlaneObject("Konkord", "Plane", 6000, 12000, 6));
-        listOfPlanes.add(new PlaneObject("Boing - 747", "Plane", 5000, 10000, 7));
-        listOfPlanes.add(new PlaneObject("IL", "Plane", 500, 1000, 8));
+        listOfPlanes.add(new PlaneObject("Boing - 747", 1, "Plane", 5000, 10000));
+        listOfPlanes.add(new PlaneObject("Boing - 747", 2, "Plane", 5000, 10000));
+        listOfPlanes.add(new PlaneObject("Boing - 747", 3, "Plane", 5000, 10000));
+        listOfPlanes.add(new PlaneObject("Mi - 78", 4, "Helicopter", 700, 900));
+        listOfPlanes.add(new PlaneObject("Konkord", 5, "Plane", 6000, 12000));
+        listOfPlanes.add(new PlaneObject("Konkord", 6, "Plane", 6000, 12000));
+        listOfPlanes.add(new PlaneObject("Boing - 747", 7, "Plane", 5000, 10000));
+        listOfPlanes.add(new PlaneObject("IL", 8, "Plane", 500, 1000));
+
 
         calculateCapacity(listOfPlanes);
-
-
 
 
     }
