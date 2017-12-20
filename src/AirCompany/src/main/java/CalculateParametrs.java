@@ -2,7 +2,7 @@ import java.util.List;
 
 public interface CalculateParametrs {
 
-    void calculateTonnage();
+    int calculateDistance(List<PlaneObject> listOfPlanes);
 
     void calculateCapacity(List<PlaneObject> listOfPlanes);
 

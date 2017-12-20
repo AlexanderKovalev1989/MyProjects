@@ -12,8 +12,10 @@ public class Application {
 
         GarageAirCompany garage = new GarageAirCompany();
 
+
         Scanner search = new Scanner(System.in);
         System.out.println("Введите необходимую вместимость летного средства :");
+
         int searchCapacity = search.nextInt();
         int element = 0;
 
@@ -46,6 +48,7 @@ public class Application {
         System.out.println("Поиск закончен, найдено " + element + " летных средств");
 
 
+        System.out.println("Общая дальность полета " + garage.calculateDistance(garage.getListOfPlanes()));
         System.out.println("----------------------------------------------------");
         System.out.println("Отсортированный, по дальности полета, список летных средств компании");
         System.out.println("----------------------------------------------------");
