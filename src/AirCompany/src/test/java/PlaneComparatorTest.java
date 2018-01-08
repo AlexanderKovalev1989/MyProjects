@@ -11,12 +11,7 @@ public class PlaneComparatorTest {
     private static final PlaneObject planeObject2 = new PlaneObject("IL", 8, "Plane", 500, 1000);
 
 
-    @Before
-    public void beforeStatement() {
-        GarageAirCompany.PlaneComparator planeComparator = new GarageAirCompany.PlaneComparator();
 
-
-    }
 
     @Test
     public void successfulAuthCompare() throws Exception {
