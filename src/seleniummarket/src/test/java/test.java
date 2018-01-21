@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,30 +14,53 @@ public class test {
 
 
 
-    public  final  String URL = "http://www.sberbank.ru/ru/person";
+    public  final static   String URL = "https://shop.mts.ru";
 
-private WebDriver driver;
+    private  WebDriver driver;
 
-@Before
- public void suitSetUps (){
+
+
+@BeforeClass
+ public static void suitSetUps (){
     FirefoxDriverManager.getInstance().setup();
+
+
 }
 
 
+
+
+@Ignore
+public  void registrationTest (){
+
+    driver.get("http://shop.mts.ru/auth/");
+
+
+
+
+}
+
+
+    @Before
+    public  void SetUp (){
+        driver = new FirefoxDriver();
+        driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+
+        driver.get(URL);
+
+
+    }
+
 @Test
 
-public  void openPageTest (){
+public void shopBasketTest (){
 
-    driver = new FirefoxDriver();
-    driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
-    driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+    ProductPage productPage = new MainShopMTS(driver).clickBuyButton();
 
-    driver.get(URL);
+    PersonalBasket personalBasket = new  ProductPage(driver).clickBuyButton1();
 
-    WebElement enterButton = driver.findElement(
-            By.className("sb-online__login"));
-
-    Assert.assertEquals(enterButton.getText(),"Вход");
+    Assert.assertEquals(personalBasket.amount.getAttribute("value") ,"1");
 
 
 
@@ -42,7 +68,7 @@ public  void openPageTest (){
 }
 
 @After
-public void closeBrowser()
+public  void closeBrowser()
 
 {
     driver.quit();
