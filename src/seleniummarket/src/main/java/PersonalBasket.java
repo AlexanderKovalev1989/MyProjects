@@ -13,7 +13,4 @@ public class PersonalBasket {
         this.amount = driver.findElement(By.className("count_number"));
     }
 
-    public WebElement getAmount() {
-        return amount;
-    }
 }

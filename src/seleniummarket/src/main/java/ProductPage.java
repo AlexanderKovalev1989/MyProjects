@@ -22,5 +22,5 @@ public class ProductPage {
         return new PersonalBasket(driver);
     }
 
-    ;
+
 }

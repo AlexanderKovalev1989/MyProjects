@@ -9,13 +9,14 @@ public class MainShopMTS {
     private WebDriver driver;
     private final WebDriverWait wait;
     WebElement buyButton;
+    WebElement registrationComplete;
 
 
     public MainShopMTS(WebDriver driver) {
         this.driver = driver;
         buyButton = driver.findElement(By.id("223641"));
         wait = new WebDriverWait(driver, 30);
-
+        this.registrationComplete = driver.findElement(By.className("lk"));
     }
 
 
