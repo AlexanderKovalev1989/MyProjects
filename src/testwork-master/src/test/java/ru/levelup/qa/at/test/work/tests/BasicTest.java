@@ -61,6 +61,12 @@ public class BasicTest {
 
     }
 
+    @Test
+    public void buySomeStuff (){
+
+
+    }
+
 
     @After
     public void tearDown() {
