@@ -35,11 +35,6 @@ public class BasicTest {
         ebayHomePage = new EbayHomePage(driver);
         ebayHomePage.open();
 
-//        driver.manage().timeouts().implicitlyWait(DriverParams.TIMEOUT_MS, TimeUnit.MILLISECONDS);
-//        driver.manage().timeouts().pageLoadTimeout(DriverParams.PAGE_LOAD_TIMEOUT_MS, TimeUnit.MILLISECONDS);
-//        ebayHomePage = new EbayHomePage(driver);
-//        ebayHomePage.open();
-
     }
 
 
@@ -67,9 +62,7 @@ public class BasicTest {
         headerElements.clickSearchButton();
         CatalogOfProductsPage catalogOfProductsPage = new CatalogOfProductsPage(driver);
 
-        //catalogOfProductsPage.getElements();
-
-
+        catalogOfProductsPage.getElements();
 
         catalogOfProductsPage.clickFirstProduct();
 
@@ -77,7 +70,10 @@ public class BasicTest {
 
         Assert.assertEquals(catalogOfProductsPage.getElement(),productPage.getSecondPrice().getText());
 
-        //Assert.assertEquals(catalogOfProductsPage.getFirstPrise().getAttribute("innerHTML"),productPage.getSecondPrice().getAttribute("innerHTML"));
+
+        //Assert.assertEquals(catalogOfProductsPage.getElement(),productPage.getSecondPrice().getText());
+
+
 
 
 

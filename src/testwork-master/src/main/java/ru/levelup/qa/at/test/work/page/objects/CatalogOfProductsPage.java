@@ -21,11 +21,13 @@ public class CatalogOfProductsPage extends  AbstractPage {
     @FindBy (xpath = "//*[@id=\"item33dc179b54\"]/h3/a")
    private WebElement firstProduct;
 
-    private  String price = firstPrise.getText().substring(0,14);
+    //private  String price = firstPrise.getText().substring(0,14);
 
 
 
-    List<WebElement> elements = driver.findElements(By.id("spf_content"));
+    List<WebElement> elements = driver.findElements(By.className("prRange"));
+
+    private  String price = elements.get(0).getText().substring(0,14);
 
     public List<WebElement> getElements() {
         return elements;
