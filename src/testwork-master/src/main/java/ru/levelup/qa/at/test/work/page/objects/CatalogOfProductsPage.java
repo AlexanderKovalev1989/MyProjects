@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class CatalogOfProductsPage extends  AbstractPage {
+public class CatalogOfProductsPage extends AbstractPage {
 
 
     public CatalogOfProductsPage(WebDriver driver) {
@@ -15,25 +15,24 @@ public class CatalogOfProductsPage extends  AbstractPage {
     }
 
 
-    @FindBy (css= "#item33dc179b54 > ul.lvprices.left.space-zero > li.lvprice.prc > span > span")
-      private  WebElement firstPrise ;
+    @FindBy(css = "#item33dc179b54 > ul.lvprices.left.space-zero > li.lvprice.prc > span > span")
+    private WebElement firstPrise;
 
-    @FindBy (xpath = "//*[@id=\"item33dc179b54\"]/h3/a")
-   private WebElement firstProduct;
+    @FindBy(xpath = "//*[@id=\"item33dc179b54\"]/h3/a")
+    private WebElement firstProduct;
 
     //private  String price = firstPrise.getText().substring(0,14);
 
 
-
     List<WebElement> elements = driver.findElements(By.className("prRange"));
 
-    private  String price = elements.get(0).getText().substring(0,14);
+    private String price = elements.get(0).getText().substring(0, 14);
 
     public List<WebElement> getElements() {
         return elements;
     }
 
-    public void clickFirstProduct (){
+    public void clickFirstProduct() {
         //System.out.println(element);
 
         firstProduct.click();

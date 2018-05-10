@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends AbstractPage {
 
-    @FindBy (xpath = "//*[@id=\"convbidPrice\"]")
+    @FindBy(xpath = "//*[@id=\"convbidPrice\"]")
 
-    private  WebElement secondPrice;
+    private WebElement secondPrice;
 
 
-    public  ProductPage (WebDriver driver){
+    public ProductPage(WebDriver driver) {
         super(driver);
     }
 
